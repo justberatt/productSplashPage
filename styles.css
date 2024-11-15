@@ -39,6 +39,12 @@ p {
     text-transform: uppercase;
 }
 
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
 /* =================
     Flex containers
    ================= */
@@ -47,7 +53,8 @@ p {
    .main-content {
        display: flex;
        flex-direction: column;
-       padding: 2.5em 2em 0 2em;   
+       padding-left: 2em;
+        padding-right: 2em;   
    }
    
 /* =================
@@ -68,6 +75,7 @@ p {
    ==================== */
 .main-content {
     align-items: center;
+    padding-top: 2.5em;
 }
 
 .img-main {
@@ -78,7 +86,42 @@ p {
 /* =================
     Form
    ================= */
-   
+
+input,
+button {
+    font-family: inherit;
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    margin-bottom: .75em;
+    padding: .5em;
+    border: 2px solid #d1d5db;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8a71ec;
+    background-color: #e6e8ec;
+}
+
+.btn {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    background-color: #8a71ec;
+    margin-top: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #b7a7f6;
+}
+
 
 /* =================
     Media queries 
