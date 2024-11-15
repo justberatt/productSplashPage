@@ -9,14 +9,19 @@ body {
    ================= */
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: 400;
     text-shadow: 5px 5px 10px #816fca;
 }
 
 h2 {
-    font-size: 2em;
-    padding: 0.375em 0;
+    font-size: 2.25rem;
+    margin: .167em 0;
+}
+
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;
 }
 
 .beta-text { 
@@ -26,6 +31,12 @@ h2 {
 .subheading {
     color: #575757;
     font-weight: 900;
+    margin-bottom: .5em;
+}
+
+.beta-text,
+.subheading {
+    text-transform: uppercase;
 }
 
 /* =================
@@ -35,7 +46,8 @@ h2 {
    .intro,
    .main-content {
        display: flex;
-       flex-direction: column;    
+       flex-direction: column;
+       padding: 2.5em 2em 0 2em;   
    }
    
 /* =================
@@ -47,7 +59,8 @@ h2 {
     min-height: 250px;
     text-align: center;
     color: #fff;
-    background-color: #9480e4;
+    background: #9480e4 url("images/intro-bg.png");
+    background-size: cover;
 }
 
 /* ====================
@@ -55,8 +68,6 @@ h2 {
    ==================== */
 .main-content {
     align-items: center;
-    
-    padding: 2.5em 2em 0 2em;
 }
 
 .img-main {
@@ -72,3 +83,34 @@ h2 {
 /* =================
     Media queries 
    ================= */
+
+   @media (min-width: 576px) {
+        body {
+            display: flex;
+        }
+
+        h1 {
+            font-size: 5vw;
+        }
+
+        h2  {
+            font-size: 2.625rem;
+        }
+
+        .beta-text {
+            font-size: 1.25rem;
+        }
+
+        .intro,
+        .main-content {
+            width: 50%; /* or flex-basis: 50% / flex: 50% / or even flex: 1*/
+        }
+
+        .intro {
+            min-height: 100vh;
+        }
+        .main-content {
+            justify-content: center;
+            padding-top: 0;
+        }
+   }
